@@ -1,23 +1,25 @@
-b = int(input())
-c = int(input())
+class Square:
+    def __init__(self, length ):
+        self.length  = length
 
+    def area (self):
+        print(self.length * self.length == 0)  
 
-class Shape():
-
-    def area(self, length, width):
-        pass
-
+class Shape(Square):
+    def __init__(self, length = 0 ):
+        self.length  = length
+    
+    def area (self) :
+        print(self.length * self.length) 
 
 class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = b
-        self.width = c
 
-    def area(self):
-        a = (self.length * self.width)
-        print(a)
+    def __init__(self,  width):
+        self.width = width
+
+    def area (self, w):
+        print( self.length  * w)  
 
 
-cl = Rectangle(b, c)
-cl.area()
-
+x=Rectangle()
+x.area()
