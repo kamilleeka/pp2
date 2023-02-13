@@ -76,11 +76,11 @@ movies = [
 }
 ]
 
-def film(s):
+def category(name):
+    list = []
     for i in movies:
-        if s == i['name']:
-            if i["imdb"] >= 5.5:
-                return True
-    return False
+        if i["category"] == name:
+            list.append(i["name"])
+    return list
 
-print(film(str(input())))
+print(category(str(input())))

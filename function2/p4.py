@@ -76,11 +76,10 @@ movies = [
 }
 ]
 
-def film(s):
-    for i in movies:
-        if s == i['name']:
-            if i["imdb"] >= 5.5:
-                return True
-    return False
 
-print(film(str(input())))
+def film(list):
+    cnt = 0
+    for s in list:
+        cnt += s["imdb"]
+        return cnt/len(list)
+print(film(movies))
