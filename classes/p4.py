@@ -1,27 +1,16 @@
-from math import sqrt
-a = int(input())
-b = int(input())
-class Point():
-    def __init__(self, point1, point2):
-        self.point1 = a
-        self.point2 = b
+import math
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def show(self):
+        print(self.x,self.y)
+    def move(self,x,y):
+        self.x=x
+        self.y=y
+    def dist(self,x,y):
+        d=math.sqrt(pow((self.x-x),2) + pow((self.y-y),2))
+        print(d)
 
-    def Show(self):
-        print(self.point1, self.point2)
-
-    def Move(self):
-        a1 = int(input())
-        b1 = int(input())
-        self.point1 = a1
-        self.point2 = b1
-
-    def Dist(self):
-        dist = sqrt(pow(self.point1, 2) + pow(self.point2, 2))
-        print(dist)
-
-
-cl = Point(a, b)
-cl.Dist()
-cl.Show()
-cl.Move()
-
+# x=Point(10,8)
+# x.dist(2,2)
